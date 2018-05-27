@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { NgModule, LOCALE_ID } from '@angular/core'
 import { HttpModule } from '@angular/http'
 import { RouterModule } from '@angular/router'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { ROUTES } from './app.routes'
 
@@ -23,9 +23,9 @@ import { OrderComponent } from './order/order.component'
 import { InputComponent } from './shared/input/input.component'
 import { RadioComponent } from './shared/radio/radio.component'
 import { OrderItemsComponent } from './order/order-items/order-items.component'
-import { OrderSevice } from './order/order.service';
-import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
-import { OrderSummaryComponent } from './order/order-summary/order-summary.component';
+import { OrderSevice } from './order/order.service'
+import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component'
+import { OrderSummaryComponent } from './order/order-summary/order-summary.component'
 import { RatingComponent } from './shared/rating/rating.component'
 
 @NgModule({
@@ -52,6 +52,7 @@ import { RatingComponent } from './shared/rating/rating.component'
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
